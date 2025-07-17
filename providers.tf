@@ -11,3 +11,10 @@ provider "oci" {
   auth                = "SecurityToken"
   config_file_profile = "learn-terraform"
 }
+
+provider "oci" {
+  region              = "ap-tokyo-1"
+  auth                = "SecurityToken"
+  config_file_profile = "learn-terraform"
+  alias               = "home"
+}
