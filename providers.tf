@@ -1,16 +1,13 @@
-provider "oci" {
-  fingerprint      = "${{ secrets.OCI_CLI_FINGERPRINT }}"
-  private_key_path = "/home/sasakiyasp/.oci/oci_api_key.pem"
-  region           = "${{ secrets.OCI_CLI_REGION }}"
-  tenancy_ocid     = "${{ secrets.OCI_CLI_TENANCY }}"
-  user_ocid        = "${{ secrets.OCI_CLI_USER }}"
+terraform {
+  required_providers {
+    oci = {
+      source = "oracle/oci"
+    }
+  }
 }
 
 provider "oci" {
-  fingerprint      = "${{ secrets.OCI_CLI_FINGERPRINT }}"
-  private_key_path = "/home/sasakiyasp/.oci/oci_api_key.pem"
-  region           = "${{ secrets.OCI_CLI_REGION }}"
-  tenancy_ocid     = "${{ secrets.OCI_CLI_TENANCY }}"
-  user_ocid        = "${{ secrets.OCI_CLI_USER }}"
-  alias            = "home"
+  region              = "ap-tokyo-1"
+  auth                = "SecurityToken"
+  config_file_profile = "learn-terraform"
 }
