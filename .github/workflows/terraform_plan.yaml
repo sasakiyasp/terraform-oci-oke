@@ -3,7 +3,6 @@ on:
  push: 
   branches:
        - main
-       
 jobs:
   terraform:
     runs-on: ubuntu-latest
@@ -14,7 +13,6 @@ jobs:
       OCI_CLI_KEY_CONTENT: ${{ secrets.OCI_CLI_KEY_CONTENT }}
       OCI_CLI_REGION: ${{ secrets.OCI_CLI_REGION }}
       OCI_INSTANCE_ID: ${{ secrets.OCI_INSTANCE_ID }}
-      
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
