@@ -329,3 +329,21 @@ variable "use_defined_tags" {
   description = "tags"
   type        = any
 }
+
+variable "tag_namespace" {
+  default     = false
+  description = "tags"
+  type        = any
+}
+
+variable "create_operator" {
+  default     = false
+  description = "operator"
+  type        = any
+}
+
+variable "freeform_tags" {
+  default     = false
+  description = "tags"
+  type        = any
+}
