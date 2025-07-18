@@ -1,14 +1,14 @@
 # Identity and access parameters
-#api_fingerprint      = $OCI_CLI_FINGERPRINT
-#api_private_key_path = $OCI_CLI_KEYPATH
+api_fingerprint      = OCI_CLI_FINGERPRINT
+api_private_key_path = OCI_CLI_KEYPATH
 
 #home_region = "us-ashburn-1"
-#region      = "ap-sydney-1"
-#tenancy_id  = "ocid1.tenancy.oc1.."
-#user_id     = "ocid1.user.oc1.."
+region      = OCI_CLI_REGION
+tenancy_id  = OCI_CLI_TENANCY
+user_id     = OCI_CLI_USER
 
 # general oci parameters
-#compartment_id = "ocid1.compartment.oc1.."
+compartment_id = "ocid1.compartment.oc1.."
 #timezone       = "Australia/Sydney"
 
 # ssh keys
