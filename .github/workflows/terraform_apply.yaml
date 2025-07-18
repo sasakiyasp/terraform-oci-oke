@@ -10,10 +10,11 @@ env:
  OCI_CLI_KEY_CONTENT: ${{ secrets.OCI_CLI_KEY_CONTENT }}
  OCI_CLI_REGION: ${{ secrets.OCI_CLI_REGION }}
  OCI_CLI_KEYPATH: ${{ secrets.OCI_CLI_KEYPATH }}
- 
+
 jobs:
   terraform:
     runs-on: ubuntu-latest
+    
     steps:
       - name: Checkout code
         uses: actions/checkout@v4

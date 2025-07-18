@@ -336,12 +336,6 @@ variable "tag_namespace" {
   type        = any
 }
 
-variable "create_operator" {
-  default     = false
-  description = "operator"
-  type        = any
-}
-
 variable "freeform_tags" {
   default     = false
   description = "tags"
