@@ -198,13 +198,13 @@ variable "create_iam_defined_tags" {
   type        = bool
 }
 
-variable "use_defined_tags" {
+variable "use_defined_tagss" {
   default     = false
   description = "Whether to apply defined tags to created resources for IAM policy and tracking."
   type        = bool
 }
 
-variable "tag_namespace" {
+variable "tag_namespaces" {
   default     = "oke"
   description = "The tag namespace for standard OKE defined tags."
   type        = string
