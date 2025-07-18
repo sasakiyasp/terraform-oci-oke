@@ -324,3 +324,8 @@ variable "enable_waf" {
   default     = false
 }
 
+variable "use_defined_tags" {
+  default     = false
+  description = "tags"
+  type        = any
+}
