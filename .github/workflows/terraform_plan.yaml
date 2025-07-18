@@ -1,4 +1,4 @@
-name: "Terraform_Init"
+name: "Terraform_Plan"
 on:
  push: 
   branches:
