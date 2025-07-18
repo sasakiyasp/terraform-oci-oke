@@ -60,12 +60,12 @@ module "vcn" {
     } : {},
     local.network_defined_tags,
   )
-  freeform_tags = merge(var.use_defined_tags ? {} : {
-    "state_id" = local.state_id,
-    "role"     = "network",
-    },
-    local.network_freeform_tags,
-  )
+#  freeform_tags = merge(var.use_defined_tags ? {} : {
+#    "state_id" = local.state_id,
+#    "role"     = "network",
+#    },
+#    local.network_freeform_tags,
+#  )
 
   attached_drg_id = var.drg_id != null ? var.drg_id : (tobool(var.create_drg) ? module.drg[0].drg_id : null)
 
