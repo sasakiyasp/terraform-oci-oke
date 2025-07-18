@@ -338,6 +338,6 @@ variable "tag_namespace" {
 
 variable "freeform_tags" {
   default     = false
-  description = "tags"
+  description = "freeform tags"
   type        = any
 }
