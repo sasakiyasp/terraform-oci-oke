@@ -1,11 +1,11 @@
 # Copyright (c) 2017, 2023 Oracle Corporation and/or its affiliates.
 # Licensed under the Universal Permissive License v 1.0 as shown at https://oss.oracle.com/licenses/upl
 
-#variable "create_operator" {
-#  default     = false
-#  description = "Whether to create an operator server in a private subnet."
-#  type        = bool
-#}
+variable "create_operator" {
+  default     = false
+  description = "Whether to create an operator server in a private subnet."
+  type        = bool
+}
 
 variable "operator_availability_domain" {
   default     = null
