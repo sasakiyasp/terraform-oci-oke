@@ -2,7 +2,7 @@
 # Licensed under the Universal Permissive License v 1.0 as shown at https://oss.oracle.com/licenses/upl
 
 variable "create_operator" {
-  default     = true
+  default     = false
   description = "Whether to create an operator server in a private subnet."
   type        = bool
 }

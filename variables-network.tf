@@ -342,20 +342,14 @@ variable "freeform_tags" {
   type        = any
 }
 
-variable "network_defined_tags" {
+variable "create_operator" {
   default     = false
-  description = "network_defined_tags"
+  description = "create_operator"
   type        = any
 }
 
-variable "network_freeform_tags" {
+variable "defined_tags" {
   default     = false
-  description = "network_freeform_tags"
-  type        = any
-}
-
-variable "operator_enabled" {
-  default     = false
-  description = "network_freeform_tags"
+  description = "defined_tags"
   type        = any
 }
