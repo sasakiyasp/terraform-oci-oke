@@ -1,4 +1,4 @@
-name: "Terraform_Plan"
+name: "Terraform_Apply"
 on:
  push: 
   branches:
@@ -27,7 +27,7 @@ jobs:
         run:  terraform plan
       - name: Terraform Apply
         run:  terraform apply -auto-approve
-      - name: Terraform Plan Destroy
-        run:  terraform plan -destroy
-      - name: Terraform Destroy
-        run:  terraform destroy -auto-approve
+#      - name: Terraform Plan Destroy
+#        run:  terraform plan -destroy
+#      - name: Terraform Destroy
+#        run:  terraform destroy -auto-approve
