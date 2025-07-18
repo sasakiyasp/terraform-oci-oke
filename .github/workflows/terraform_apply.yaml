@@ -9,6 +9,8 @@ env:
  OCI_CLI_FINGERPRINT: ${{ secrets.OCI_CLI_FINGERPRINT }}
  OCI_CLI_KEY_CONTENT: ${{ secrets.OCI_CLI_KEY_CONTENT }}
  OCI_CLI_REGION: ${{ secrets.OCI_CLI_REGION }}
+ OCI_CLI_KEYPATH: ${{ secrets.OCI_CLI_KEYPATH }}
+
 jobs:
   terraform:
     runs-on: ubuntu-latest
@@ -32,6 +34,6 @@ jobs:
 
       - name: Terraform Show
         run:  terraform show
-        
+
       - name: Terraform Destroy
         run:  terraform destroy -auto-approve

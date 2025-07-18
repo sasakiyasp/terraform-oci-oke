@@ -36,7 +36,7 @@ locals {
     anytrue([                                             # enable for configurations that generally utilize it
       var.vcn_create_nat_gateway == "always",             # always enable
       !var.worker_is_public,                              # enable for private workers
-#      var.create_operator,                                # enable for operator
+#       var.create_operator,                                # enable for operator
       !var.control_plane_is_public,                       # enable for cluster w/ private endpoint
       contains(["internal", "both"], var.load_balancers), # enable for cluster w/ private load balancers
     ])
