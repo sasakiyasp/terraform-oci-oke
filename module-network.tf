@@ -116,9 +116,9 @@ module "network" {
   state_id         = local.state_id
   compartment_id   = coalesce(var.network_compartment_id, local.compartment_id)
   defined_tags     = local.network_defined_tags
-  freeform_tags    = local.network_freeform_tags
-  tag_namespace    = var.tag_namespace
-  use_defined_tags = var.use_defined_tags
+  #freeform_tags    = local.network_freeform_tags
+  #tag_namespace    = var.tag_namespace
+  #use_defined_tags = var.use_defined_tags
 
   allow_node_port_access       = var.allow_node_port_access
   allow_pod_internet_access    = var.allow_pod_internet_access
@@ -142,7 +142,7 @@ module "network" {
   create_nat_gateway           = local.create_nat_gateway
   enable_ipv6                  = var.enable_ipv6
   nsgs                         = var.nsgs
-  create_operator              = local.operator_enabled
+  #create_operator              = local.operator_enabled
   drg_attachments              = var.drg_attachments
   enable_waf                   = var.enable_waf
   ig_route_table_id            = local.ig_route_table_id
