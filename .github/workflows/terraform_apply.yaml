@@ -35,6 +35,6 @@ jobs:
 
       - name: Terraform Show
         run:  terraform show
-
+        
       - name: Terraform Destroy
         run:  terraform destroy -auto-approve
