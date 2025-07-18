@@ -341,3 +341,21 @@ variable "freeform_tags" {
   description = "freeform tags"
   type        = any
 }
+
+variable "network_defined_tags" {
+  default     = false
+  description = "network_defined_tags"
+  type        = any
+}
+
+variable "network_freeform_tags" {
+  default     = false
+  description = "network_freeform_tags"
+  type        = any
+}
+
+variable "operator_enabled" {
+  default     = false
+  description = "network_freeform_tags"
+  type        = any
+}
