@@ -3,7 +3,7 @@
 
 # Setting variables
 variable "state_id" {
-  state_id = "ap-tokyo-1"
+  default = "ap-tokyo-1"
 }
 
 // Used to retrieve available bastion images when enabled
@@ -47,7 +47,7 @@ locals {
 module "bastion" {
   count          = var.create_bastion ? 1 : 0
   source         = "./modules/bastion"
-  state_id       = "ap-tokyo-1"
+  state_id       = local.state_id
   compartment_id = "ocid1.compartment.oc1..aaaaaaaat34dbqqstzlkz4apgguqhnvna5crdcgenkd4hsjjl3cdtr7wl5fq"
 
   # Bastion
