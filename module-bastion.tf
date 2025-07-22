@@ -19,11 +19,7 @@ data "oci_core_images" "bastion" {
 }
 
 locals {
-  tag_namespace = "tag false"
-  defined_tags  = "tag false"
-  freeform_tags = "tag false"
-  use_defined_tags = "tag false"
-  bastion_public_ip = (var.create_bastion && length(module.bastion) > 0
+    bastion_public_ip = (var.create_bastion && length(module.bastion) > 0
     ? lookup(element(module.bastion, 0), "public_ip", var.bastion_public_ip)
     : var.bastion_public_ip
   )
