@@ -1,11 +1,6 @@
 # Copyright (c) 2017, 2023 Oracle Corporation and/or its affiliates.
 # Licensed under the Universal Permissive License v 1.0 as shown at https://oss.oracle.com/licenses/upl
 
-# Setting variables
-variable "state_id" {
-  default = "ap-tokyo-1"
-}
-
 // Used to retrieve available bastion images when enabled
 data "oci_core_images" "bastion" {
   count                    = var.create_bastion ? 1 : 0
@@ -47,7 +42,7 @@ locals {
 module "bastion" {
   count          = var.create_bastion ? 1 : 0
   source         = "./modules/bastion"
-  state_id       = local.state_id
+  state_id       = var.state_id
   compartment_id = "ocid1.compartment.oc1..aaaaaaaat34dbqqstzlkz4apgguqhnvna5crdcgenkd4hsjjl3cdtr7wl5fq"
 
   # Bastion
