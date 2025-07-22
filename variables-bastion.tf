@@ -93,12 +93,3 @@ variable "bastion_await_cloudinit" {
   description = "Whether to block until successful connection to bastion and completion of cloud-init."
   type        = bool
 }
-
-##
-##
-
-variable "freeform_tags" {
-  default     = true
-  description = "modify"
-  type        = string
-}
