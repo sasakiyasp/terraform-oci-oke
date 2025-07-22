@@ -39,6 +39,12 @@ locals {
   ), [])
 }
 
+locals "state_id" {
+  default     = null
+  description = "Optional Terraform state_id from an existing deployment of the module to re-use with created resources."
+  type        = string
+}
+
 module "bastion" {
   count          = var.create_bastion ? 1 : 0
   source         = "./modules/bastion"
