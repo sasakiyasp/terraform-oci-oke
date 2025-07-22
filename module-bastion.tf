@@ -47,7 +47,7 @@ module "bastion" {
   count          = var.create_bastion ? 1 : 0
   source         = "./modules/bastion"
   state_id       = var.state_id
-  compartment_id = "ocid1.compartment.oc1..aaaaaaaat34dbqqstzlkz4apgguqhnvna5crdcgenkd4hsjjl3cdtr7wl5fq"
+  compartment_id = "OCI_CLI_TENANCY"
 
   # Bastion
   await_cloudinit          = var.bastion_await_cloudinit
