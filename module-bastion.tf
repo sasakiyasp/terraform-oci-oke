@@ -61,6 +61,9 @@ module "bastion" {
   upgrade                  = var.bastion_upgrade
   user                     = var.bastion_user
   freeform_tags            = ""
+  use_defined_tags         = ""
+  tag_namespace            = ""
+  defined_tags             = ""
 
   # Standard tags as defined if enabled for use, or freeform
   # User-provided tags are merged last and take precedence
