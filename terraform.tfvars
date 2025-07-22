@@ -1,6 +1,6 @@
 # Identity and access parameters
-api_fingerprint      = "OCI_CLI_FINGERPRINT"
-api_private_key_path = "OCI_CLI_KEY_CONTENT"
+api_fingerprint = "OCI_CLI_FINGERPRINT"
+api_private_key = "OCI_CLI_KEY_CONTENT"
 
 #home_region = "us-ashburn-1"
 region      = "OCI_CLI_REGION"
