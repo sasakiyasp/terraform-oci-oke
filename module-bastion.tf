@@ -3,7 +3,7 @@
 
 # Setting variables
 variable "state_id" {
-  default = "ap-tokyo-1"
+  state_id = "ap-tokyo-1"
 }
 
 // Used to retrieve available bastion images when enabled
