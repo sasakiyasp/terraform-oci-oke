@@ -83,7 +83,8 @@ module "vcn" {
   enable_ipv6   = var.enable_ipv6
   vcn_cidrs     = local.vcn_cidrs
   vcn_dns_label = var.assign_dns ? coalesce(var.vcn_dns_label, local.state_id) : null
-  vcn_name      = coalesce(var.vcn_name, "oke-${local.state_id}")
+  vcn_name      = coalesce(var.vcn_name, local.state_id)
+#  vcn_name      = coalesce(var.vcn_name, "oke-${local.state_id}")
 }
 
 module "drg" {
