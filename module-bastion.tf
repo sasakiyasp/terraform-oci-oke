@@ -4,7 +4,7 @@
 // Used to retrieve available bastion images when enabled
 data "oci_core_images" "bastion" {
   count                    = var.create_bastion ? 1 : 0
-  compartment_id           = local.compartment_id
+  compartment_id           = "ocid1.compartment.oc1..aaaaaaaat34dbqqstzlkz4apgguqhnvna5crdcgenkd4hsjjl3cdtr7wl5fq"
   operating_system         = var.bastion_image_os
   operating_system_version = var.bastion_image_os_version
   shape                    = lookup(var.bastion_shape, "shape", "VM.Standard.E4.Flex")
@@ -60,19 +60,20 @@ module "bastion" {
   timezone                 = var.timezone
   upgrade                  = var.bastion_upgrade
   user                     = var.bastion_user
+  freeform_tags            = ""
 
   # Standard tags as defined if enabled for use, or freeform
   # User-provided tags are merged last and take precedence
-  #use_defined_tags = var.use_defined_tags
-  #tag_namespace    = var.tag_namespace
-  #defined_tags = merge(var.use_defined_tags ? {
+  # use_defined_tags = var.use_defined_tags
+  # tag_namespace    = var.tag_namespace
+  # defined_tags = merge(var.use_defined_tags ? {
   #  "${var.tag_namespace}.state_id" = local.state_id,
   #  "${var.tag_namespace}.role"     = "bastion",
-  #} : {}, local.bastion_defined_tags)
-  #freeform_tags = merge(var.use_defined_tags ? {} : {
+  # } : {}, local.bastion_defined_tags)
+  # freeform_tags = merge(var.use_defined_tags ? {} : {
   #  "state_id" = local.state_id,
   #  "role"     = "bastion",
-  #}, local.bastion_freeform_tags)
+  # }, local.bastion_freeform_tags)
 }
 
 output "bastion_id" {
