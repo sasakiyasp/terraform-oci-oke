@@ -75,8 +75,8 @@ module "bastion" {
     } : {}, local.bastion_defined_tags)
     freeform_tags = merge(var.use_defined_tags ? {} : {
      "state_id" = local.state_id,
-    "role"     = "bastion",
-  # }, local.bastion_freeform_tags)
+     "role"     = "bastion",
+    }, local.bastion_freeform_tags)
 }
 
 output "bastion_id" {
