@@ -73,7 +73,7 @@ module "bastion" {
   #  "state_id" = local.state_id,
   #  "role"     = "bastion",
   #}, local.bastion_freeform_tags)
-#}
+}
 
 output "bastion_id" {
   description = "ID of bastion instance"
