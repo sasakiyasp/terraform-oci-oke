@@ -42,8 +42,8 @@ locals {
 module "bastion" {
   count          = var.create_bastion ? 1 : 0
   source         = "./modules/bastion"
-  state_id       = local.state_id
-  compartment_id = local.compartment_id
+  state_id       = "ap-tokyo-1"
+  compartment_id = "ocid1.compartment.oc1..aaaaaaaat34dbqqstzlkz4apgguqhnvna5crdcgenkd4hsjjl3cdtr7wl5fq"
 
   # Bastion
   await_cloudinit          = var.bastion_await_cloudinit
